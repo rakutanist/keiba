@@ -43,7 +43,7 @@ for k, i in enumerate(tqdm(horse["馬URL"])):
         elif j.find("dt").text == "生産牧場":
             bokujo = j.find("dd").text
 
-    pedigree[k] = [father, grandfather]
+    pedigree[k] = [father, grandfather, orner, bokujo]
     time.sleep(0.3)
     # %%
 horse[["父", "母父"]] = pedigree
